@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
+
+
+	<servlet>
+		<servlet-name>ClientServlet</servlet-name>
+		<servlet-class>com.omazon.web.ClientServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClientServlet</servlet-name>
+		<url-pattern>/CreationClient</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>CommandeServlet</servlet-name>
+		<servlet-class>com.omazon.web.CommandeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommandeServlet</servlet-name>
+		<url-pattern>/CreationCommande</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AfficheClientServlet</servlet-name>
+		<servlet-class>com.omazon.web.AfficheClientServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AfficheClientServlet</servlet-name>
+		<url-pattern>/AfficheClient</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AfficheCommandeServlet</servlet-name>
+		<servlet-class>com.omazon.web.AfficheCommandeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AfficheCommandeServlet</servlet-name>
+		<url-pattern>/AfficheCommande</url-pattern>
+	</servlet-mapping>
+
+</web-app>
